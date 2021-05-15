@@ -1,5 +1,6 @@
 import React from "react";
 import Header from './Header';
+import SwipeButtons from './SwipeButtons';
 import ProfileCards from './ProfileCards';
 import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 
@@ -19,6 +20,7 @@ function App() {
         </Route>
         <Route path="/">
           <ProfileCards />
+          <SwipeButtons />
         </Route>
       </Switch>
     </Router>
