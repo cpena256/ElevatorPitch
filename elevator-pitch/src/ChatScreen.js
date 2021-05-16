@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import './ChatScreen.css';
 
 function ChatScreen () {
+    const [input, setInput ] = useState('');
     const [messages, setMessages] = useState ([
     {
         name: 'Marc',
@@ -18,6 +19,12 @@ function ChatScreen () {
         message: "Let's set up a meeting this week.",
     },
     ]);
+
+    const handleSend = (e) => {
+        e.preventDefault();
+        setMessages([...messages, {message: input }]);
+        setInput('');
+    };
     return ( 
     <div className="chatScreen">
         <p className="chatScreen__timestamp">You matched with Marc on 5/16/21</p>
@@ -37,6 +44,16 @@ function ChatScreen () {
            
 
         ))}
+        
+            <form className="chatScreen__input">
+            <input value={input} 
+            onChange={e => setInput(e.target.value)}
+            className="chatScreen__inputField" 
+            placeholder="Type a message..." type="text">
+                </input>
+                <button onClick={handleSend}  type="submit" className="chatScreen__inputButton">SEND</button>
+            </form>
+        
     </div>
     );   
 }

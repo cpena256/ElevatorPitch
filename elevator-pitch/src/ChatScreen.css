@@ -24,3 +24,25 @@
     border-radius: 20px;
 }
 
+.chatScreen__input{
+    display: flex;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid lightgray;
+}
+.chatScreen__inputField{
+    flex: 1;
+    padding: 10px;
+    border: none;
+}
+
+.chatScreen__inputButton{
+    margin-right: 20px;
+    border: none;
+    background-color: white;
+    font-weight: bolder;
+    color: rgb(0, 37, 85);
+    border: none;
+}
