@@ -9,4 +9,6 @@
 
 .header__title{
     padding: 30px;
+    text-decoration: none;
+    color: inherit;
 }

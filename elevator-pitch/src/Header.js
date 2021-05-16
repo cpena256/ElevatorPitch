@@ -22,7 +22,7 @@ function Header({ backButton })  {
         <Link to="/">
         <h2 className="header__title">Elevator Pitch</h2>
         </Link>
-        <Link to="/chats">
+        <Link to="/chat">
             <IconButton>
                 <ChatBubbleIcon className="header__icon" fontSize="large"/>
             </IconButton>
